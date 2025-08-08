@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Анар Аляров — портфолио</title>
+  <meta name="description" content="ССО • Финансовая грамотность • Дизайн / Фото / Видео / Подкасты" />
+  <style>
+    :root{ --bg:#0a0a0a; --fg:#ffffff; --muted:#a1a1aa; --card:#111214; --border:#222428;
+           --primary:#10b981; --secondary:#facc15; --chip:#1f2937; --shadow:0 10px 25px rgba(0,0,0,.35);
+           --radius:16px; --max:1120px }
+    *{box-sizing:border-box} html,body{margin:0;height:100%}
+    body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:var(--bg); color:var(--fg); line-height:1.55}
+    a{color:inherit;text-decoration:none} .container{max-width:var(--max);margin:0 auto;padding:0 16px}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(10px);background:rgba(10,10,10,.7);border-bottom:1px solid var(--border)}
+    .h-inner{height:64px;display:flex;align-items:center;justify-content:space-between}
+    nav a{opacity:.9} nav a:hover{opacity:.7} .logo{display:flex;align-items:center;gap:10px;font-weight:700}
+    .dot{width:32px;height:32px;border-radius:12px;background:var(--primary);box-shadow:0 0 0 6px rgba(16,185,129,.08)}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#141516;color:var(--fg);cursor:pointer;transition:.2s}
+    .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)} .btn-primary{border-color:transparent;background:var(--primary);color:#00150c;font-weight:700}
+    .btn-chip{background:var(--chip);border-color:transparent;padding:8px 12px;border-radius:999px}
+    .grid{display:grid;gap:24px} .hero{padding:64px 0 32px} .hero h1{font-size:clamp(28px,4vw,48px);line-height:1.1;margin:0 0 10px}
+    .muted{color:var(--muted)} .hero-visual{position:relative;display:grid;grid-template-columns:160px 1fr;gap:16px;align-items:center}
+    .avatar{width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid rgba(250,204,21,.35);box-shadow:0 6px 18px rgba(0,0,0,.35)}
+    .blob{height:160px;border-radius:24px;background:radial-gradient(55% 55% at 60% 35%, rgba(16,185,129,.35), transparent 60%),radial-gradient(55% 55% at 35% 70%, rgba(250,204,21,.32), transparent 60%),linear-gradient(135deg, rgba(16,185,129,.15), rgba(250,204,21,.18))}
+    .stat{position:absolute;right:-12px;bottom:-12px;background:var(--card);border:1px solid var(--border);border-radius:16px;padding:12px 14px;box-shadow:var(--shadow);font-size:14px}
+    section{padding:40px 0} h2{font-size:clamp(22px,3.2vw,32px); margin:0 0 6px} .sep{height:1px;background:var(--border);margin:16px 0 24px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px} .card:hover{box-shadow:var(--shadow)}
+    .cover{aspect-ratio:16/9;border-radius:12px;background:#0f1113;overflow:hidden;display:block} .cover img{width:100%;height:100%;object-fit:cover;opacity:.9}
+    .row{display:flex;align-items:center;justify-content:space-between;gap:12px} .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .chip{border:1px solid var(--border);padding:6px 10px;border-radius:999px;font-size:12px;background:#141516}
+    .projects{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))} .about-grid{grid-template-columns:2fr 1fr}
+    @media (max-width: 900px){ .about-grid{grid-template-columns:1fr} .hero-visual{grid-template-columns:1fr} }
+    .services{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))} .field{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:#141516;color:var(--fg)}
+    textarea.field{min-height:120px;resize:vertical} footer{border-top:1px solid var(--border);padding:24px 0;color:var(--muted);font-size:14px}
+    .tabs{display:flex;flex-wrap:wrap;gap:8px} .tabs button{background:transparent;border:1px solid var(--border);color:var(--fg);padding:8px 14px;border-radius:999px;cursor:pointer}
+    .tabs button.active{background:var(--primary);color:#00150c;border-color:transparent;font-weight:700} .socials a{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;background:var(--chip)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container h-inner">
+      <div class="logo"><div class="dot"></div><span>Анар Аляров</span></div>
+      <nav class="hide-mobile">
+        <a href="#projects">Проекты</a> &nbsp;&nbsp; <a href="#about">Обо мне</a> &nbsp;&nbsp; <a href="#services">Услуги</a> &nbsp;&nbsp; <a href="#contact">Контакты</a>
+      </nav>
+      <div>
+        <button class="btn" id="themeBtn" title="Переключить тему">🌓</button>
+        <a class="btn btn-primary" href="#contact">Связаться →</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container grid" style="grid-template-columns: 1.1fr .9fr; align-items:center">
+        <div>
+          <h1>ССО • Финансовая грамотность • Дизайн / Фото / Видео / Подкасты</h1>
+          <p class="muted">Запускаю и упаковываю проекты: Telegram и VK-каналы, айдентика, лендинги, съёмка и подкасты.</p>
+          <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap">
+            <a class="btn btn-primary" href="#projects">Смотреть проекты</a>
+            <a class="btn" href="#about">Обо мне</a>
+          </div>
+          <div class="muted" style="margin-top:16px; display:flex; gap:18px; flex-wrap:wrap; font-size:14px">
+            <span>✉️ hi@example.com</span> <span>📞 +7 (999) 000-00-00</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img class="avatar" src="avatar.jpg" alt="Аватар">
+          <div class="blob"></div>
+          <div class="stat">10+ завершённых проектов<br><span class="muted">финансы • медиа • веб</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>Проекты</h2>
+        <div class="sep"></div>
+        <div class="tabs" id="tabs"></div>
+        <div class="grid projects" id="projectsGrid" style="margin-top:16px"></div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>Обо мне</h2>
+        <div class="sep"></div>
+        <div class="grid about-grid">
+          <div class="card" style="padding:18px">
+            Работаю на стыке PR, дизайна и продакшна. Собираю команды под задачу и довожу результат: визуальные системы, лендинги, заметные ролики и чистые презентации. Общаюсь с заказчиком на одном языке и превращаю брифы в понятные планы.
+            <div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:12px; font-size:14px">
+              <div class="card" style="background:#141516">Опыт: <b>5+ лет</b></div>
+              <div class="card" style="background:#141516">География: <b>Югра • РФ • СНГ</b></div>
+            </div>
+            <div class="chips" style="margin-top:12px">
+              <span class="chip">PR / ССО</span><span class="chip">Финансовая грамотность</span><span class="chip">Telegram</span><span class="chip">VK</span>
+              <span class="chip">Figma</span><span class="chip">Photoshop</span><span class="chip">Illustrator</span><span class="chip">After Effects</span><span class="chip">Premiere Pro</span><span class="chip">DaVinci</span>
+            </div>
+          </div>
+          <div class="grid" style="gap:16px">
+            <div class="card">
+              <b>Услуги</b>
+              <ul style="margin:8px 0 0 18px; color:var(--muted)">
+                <li>Айдентика и брендинг</li><li>Веб и лендинги</li><li>Видео и подкасты</li><li>SMM-дизайн</li>
+              </ul>
+            </div>
+            <div class="card socials" style="display:flex; gap:12px; flex-wrap:wrap">
+              <a href="#" title="Telegram">📨 TG</a><a href="#" title="VK">👥 VK</a><a href="#" title="Instagram">📸 Insta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2>Услуги</h2>
+        <div class="sep"></div>
+        <div class="grid services">
+          <div class="card"><b>Айдентика & брендинг</b><br><span class="muted">Логотип, гайдлайн, носители.</span></div>
+          <div class="card"><b>Веб & лендинги</b><br><span class="muted">Под задачу — структура и верстка.</span></div>
+          <div class="card"><b>Видео & подкасты</b><br><span class="muted">Промо-ролики, репортажи, оформление.</span></div>
+          <div class="card"><b>SMM-дизайн</b><br><span class="muted">Система карточек и шаблонов.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Отзывы <span class="muted" style="font-size:.7em">по запросу — контакты</span></h2>
+        <div class="sep"></div>
+        <div class="grid services">
+          <div class="card"><i>«Анар держит уровень: сроки, визуал, коммуникация — всё по делу.»</i><br><span class="muted">Клиент #1</span></div>
+          <div class="card"><i>«Спокойная работа с результатом. Предлагает решения, а не проблемы.»</i><br><span class="muted">Клиент #2</span></div>
+          <div class="card"><i>«Упаковал проект и сделал понятным для наших партнёров.»</i><br><span class="muted">Клиент #3</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Связаться</h2>
+        <div class="sep"></div>
+        <div class="grid" style="grid-template-columns:1fr 1fr">
+          <div class="card">
+            <div style="display:grid; gap:12px">
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px">
+                <input class="field" placeholder="Имя" /><input class="field" placeholder="Email" type="email" />
+              </div>
+              <input class="field" placeholder="Тема проекта" />
+              <textarea class="field" placeholder="Коротко о задаче, сроках и бюджете"></textarea>
+              <div class="row">
+                <span class="muted" style="font-size:12px">ответ в течение 24 часов</span>
+                <button class="btn btn-primary" onclick="alert('Форма-заглушка. Подключим к почте или TG-боту по запросу.')">Отправить →</button>
+              </div>
+            </div>
+          </div>
+          <div class="grid" style="gap:16px">
+            <div class="card">
+              <div style="display:grid; gap:10px; font-size:14px">
+                <div>✉️ hi@example.com</div><div>📞 +7 (999) 000-00-00</div>
+                <div class="socials" style="display:flex; gap:12px; margin-top:6px">
+                  <a href="#">📨 TG</a><a href="#">👥 VK</a><a href="#">📸 Insta</a>
+                </div>
+              </div>
+            </div>
+            <div class="card"><span class="muted">По запросу соберу кейс-слайды для Behance/VC.RU или перенесу страницу на Tilda/Framer.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container row">
+      <span>© <span id="year"></span> Анар Аляров. Все права защищены.</span>
+      <div><a href="#top">Наверх</a> &nbsp;&nbsp; <a href="#projects">Проекты</a> &nbsp;&nbsp; <a href="#contact">Связаться</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const CATEGORIES = ["Все", "Финансовая грамотность", "Дизайн", "Фото/Видео", "Подкасты", "Веб"];
+    const PROJECTS = [
+      {title:"Финансовый сентябрь — РЦФГ Югры", subtitle:"Продюсирование, айдентика, лендинг, контент", year:"2025", tags:["Финансовая грамотность","Дизайн","Веб"], stars:5, img:"p1.jpg"},
+      {title:"Telegram-канал о финграмоте", subtitle:"Редакция, визуальные рубрики, рост вовлечённости", year:"2025", tags:["Финансовая грамотность","Дизайн"], stars:5, img:"p2.jpg"},
+      {title:"Подкаст «Выжить в минус»", subtitle:"Люди, которые делают город лучше. 20 выпусков", year:"2025", tags:["Подкасты"], stars:5, img:"p3.jpg", link:"podcast.html"},
+      {title:"FDhouse", subtitle:"Сайт и визуальная система танцевальной студии", year:"2024", tags:["Веб","Дизайн"], stars:4, img:"p4.jpg"},
+      {title:"OpenStandUp", subtitle:"Афиши, мерч, фото-серии", year:"2024", tags:["Дизайн","Фото/Видео"], stars:5, img:"p5.jpg"},
+      {title:"A/V продакшн — клипы и репортажи", subtitle:"Съёмка, монтаж, цвет, титры", year:"2023", tags:["Фото/Видео"], stars:4, img:"p6.jpg"},
+    ];
+    const tabsEl = document.getElementById('tabs'); const gridEl = document.getElementById('projectsGrid'); let active = "Все";
+    function renderTabs(){ tabsEl.innerHTML = ""; CATEGORIES.forEach(cat => { const b=document.createElement('button'); b.textContent=cat; b.className='btn-chip'+(cat===active?' active':''); b.onclick=()=>{active=cat; renderTabs(); renderProjects();}; tabsEl.appendChild(b); }); }
+    function starRow(n){ return '⭐'.repeat(n||0); }
+    function renderProjects(){
+      const items = active==="Все" ? PROJECTS : PROJECTS.filter(p => (p.tags||[]).includes(active));
+      gridEl.innerHTML = items.map(p => `
+        <a class="card" href="${p.link || '#'}">
+          <div class="cover"><img src="${p.img}" alt=""></div>
+          <div class="row" style="margin-top:10px"><b>${p.title}</b><span class="muted">${starRow(p.stars)}</span></div>
+          <div class="row muted" style="font-size:14px;margin-top:6px"><span>${p.subtitle||''}</span><span>${p.year||''}</span></div>
+          <div class="chips">${(p.tags||[]).map(t=>`<span class="chip">${t}</span>`).join('')}</div>
+        </a>`).join('');
+    }
+    const themeBtn = document.getElementById('themeBtn'); let dark = true;
+    themeBtn.onclick = () => { dark = !dark; document.documentElement.style.setProperty('--bg', dark ? '#0a0a0a' : '#ffffff'); document.documentElement.style.setProperty('--fg', dark ? '#ffffff' : '#0b0b0b'); document.documentElement.style.setProperty('--card', dark ? '#111214' : '#f6f7f8'); document.documentElement.style.setProperty('--border', dark ? '#222428' : '#e3e5e8'); document.documentElement.style.setProperty('--chip', dark ? '#1f2937' : '#eef2f7'); };
+    renderTabs(); renderProjects(); document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
